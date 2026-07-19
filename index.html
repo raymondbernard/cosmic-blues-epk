@@ -370,6 +370,52 @@
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      
+      // Lightbox for gallery images
+      const lightbox = document.createElement('div');
+      lightbox.id = 'lightbox';
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img class="lightbox-img" src="" alt=""><div class="lightbox-caption"></div>';
+      document.body.appendChild(lightbox);
+      
+      const lightboxStyle = document.createElement('style');
+      lightboxStyle.textContent = `
+        .lightbox{display:none;position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);cursor:pointer;justify-content:center;align-items:center;flex-direction:column}
+        .lightbox.active{display:flex}
+        .lightbox-img{max-width:90%;max-height:80vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+        .lightbox-close{position:absolute;top:24px;right:32px;font-size:48px;color:#fff;cursor:pointer;font-weight:300;line-height:1;transition:color .2s}
+        .lightbox-close:hover{color:var(--yellow)}
+        .lightbox-caption{color:#fff;margin-top:16px;font-size:1.1rem;font-weight:600;text-align:center;padding:0 24px;max-width:800px}
+        @media(max-width:768px){.lightbox-close{right:24px;top:16px;font-size:40px}.lightbox-caption{font-size:.95rem;padding:0 16px}}
+      `;
+      document.head.appendChild(lightboxStyle);
+      
+      document.querySelectorAll('.gallery-img').forEach(galleryImg => {
+        galleryImg.style.cursor = 'pointer';
+        galleryImg.addEventListener('click', function() {
+          const img = this.querySelector('img');
+          const cap = this.querySelector('.cap');
+          lightbox.querySelector('.lightbox-img').src = img.src;
+          lightbox.querySelector('.lightbox-img').alt = img.alt;
+          lightbox.querySelector('.lightbox-caption').textContent = cap ? cap.textContent : '';
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      lightbox.addEventListener('click', function(e) {
+        if (e.target !== lightbox.querySelector('.lightbox-img')) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          lightbox.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
     });
   </script>
 
