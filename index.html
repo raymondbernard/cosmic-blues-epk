@@ -238,18 +238,18 @@
       <div class="center-head">
         <div class="section-eyebrow">Watch &amp; Listen</div>
         <h2 class="section-title">See it live.</h2>
-        <p class="section-sub">Live from the Gladstone Hotel, Toronto.</p>
+        <p class="section-sub">From sold-out shows at B.B. King's to residencies in Toronto.</p>
       </div>
       <div class="video-wrap">
         <div class="video-container">
-          <iframe src="https://www.youtube-nocookie.com/embed/XKqRV3OGQdo" title="Cosmic Blues Band live at Gladstone Hotel, Toronto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/LQAtWmGiX0Q" title="Cosmic Blues Band live at B.B. King's Blues Club, Times Square" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
       <div class="row" style="margin-bottom:0">
+        <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://youtu.be/LQAtWmGiX0Q" target="_blank" rel="noopener"><div class="t">Sold Out at B.B. King's</div><div class="w">Times Square, NYC</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Watch</span></a></div>
+        <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://youtu.be/LIub00uelow" target="_blank" rel="noopener"><div class="t">Red House</div><div class="w">Residency @ Imperial Bar, NYC</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Watch</span></a></div>
         <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://youtu.be/9LQb8fclpGg" target="_blank" rel="noopener"><div class="t">Cosmic Blues Jam</div><div class="w">Gladstone Hotel, Toronto</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Watch</span></a></div>
-        <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://youtu.be/LQAtWmGiX0Q" target="_blank" rel="noopener"><div class="t">Live at B.B. King's</div><div class="w">Times Square, NYC</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Watch</span></a></div>
-        <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://youtu.be/EvL2xoJWWs8" target="_blank" rel="noopener"><div class="t">Solo Set</div><div class="w">Guitar &amp; vocals</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Watch</span></a></div>
-        <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://youtu.be/nrcwh6Ka708" target="_blank" rel="noopener"><div class="t">Cosmic Ray Presents</div><div class="w">B.B. King's, NYC</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Watch</span></a></div>
+        <div class="col s12 m6 l3"><a class="clip-card waves-effect" href="https://www.youtube.com/@cosmicray007" target="_blank" rel="noopener"><div class="t">YouTube Channel</div><div class="w">All videos</div><span class="play"><i class="material-icons tiny">play_circle_filled</i> Subscribe</span></a></div>
       </div>
     </div>
   </section>
@@ -347,14 +347,14 @@
       <p class="em"><a href="mailto:info@cosmicbluesband.com">info@cosmicbluesband.com</a> · <a href="tel:9293617136">929-361-7136</a></p>
       <div>
         <a class="btn-large btn-primary waves-effect waves-light" href="mailto:info@cosmicbluesband.com?subject=Booking%20Inquiry%20—%20Cosmic%20Ray"><i class="material-icons left">email</i>Email to Book</a>
-        <a class="btn-large waves-effect white" style="color:#0d3b66" href="https://youtu.be/XKqRV3OGQdo" target="_blank" rel="noopener"><i class="material-icons left">play_arrow</i>Watch Live</a>
+        <a class="btn-large waves-effect white" style="color:#0d3b66" href="https://youtu.be/LQAtWmGiX0Q" target="_blank" rel="noopener"><i class="material-icons left">play_arrow</i>Watch Live</a>
       </div>
       <div class="social">
         <a href="https://facebook.com/cosmicbluesband" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/cosmicbluesband/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.twitter.com/cosmicbluesband" target="_blank" rel="noopener">X / Twitter</a>
         <a href="https://www.linkedin.com/in/cosmic-ray-345929109" target="_blank" rel="noopener">LinkedIn</a>
-
+        <a href="https://www.youtube.com/@cosmicray007" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
   </section>
@@ -370,54 +370,31 @@
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      M.Modal.init(document.querySelectorAll('.modal'), {opacity: 0.92, preventScrolling: true});
       
-      // Lightbox for gallery images
-      const lightbox = document.createElement('div');
-      lightbox.id = 'lightbox';
-      lightbox.className = 'lightbox';
-      lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img class="lightbox-img" src="" alt=""><div class="lightbox-caption"></div>';
-      document.body.appendChild(lightbox);
-      
-      const lightboxStyle = document.createElement('style');
-      lightboxStyle.textContent = `
-        .lightbox{display:none;position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.92);cursor:pointer;justify-content:center;align-items:center;flex-direction:column}
-        .lightbox.active{display:flex}
-        .lightbox-img{max-width:90%;max-height:80vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
-        .lightbox-close{position:absolute;top:24px;right:32px;font-size:48px;color:#fff;cursor:pointer;font-weight:300;line-height:1;transition:color .2s}
-        .lightbox-close:hover{color:var(--yellow)}
-        .lightbox-caption{color:#fff;margin-top:16px;font-size:1.1rem;font-weight:600;text-align:center;padding:0 24px;max-width:800px}
-        @media(max-width:768px){.lightbox-close{right:24px;top:16px;font-size:40px}.lightbox-caption{font-size:.95rem;padding:0 16px}}
-      `;
-      document.head.appendChild(lightboxStyle);
-      
+      // Gallery image click → open modal with full image
       document.querySelectorAll('.gallery-img').forEach(galleryImg => {
         galleryImg.style.cursor = 'pointer';
         galleryImg.addEventListener('click', function() {
           const img = this.querySelector('img');
           const cap = this.querySelector('.cap');
-          lightbox.querySelector('.lightbox-img').src = img.src;
-          lightbox.querySelector('.lightbox-img').alt = img.alt;
-          lightbox.querySelector('.lightbox-caption').textContent = cap ? cap.textContent : '';
-          lightbox.classList.add('active');
-          document.body.style.overflow = 'hidden';
+          const modal = document.getElementById('image-modal');
+          modal.querySelector('.modal-img').src = img.src;
+          modal.querySelector('.modal-img').alt = img.alt;
+          modal.querySelector('.modal-caption').textContent = cap ? cap.textContent : '';
+          M.Modal.getInstance(modal).open();
         });
-      });
-      
-      lightbox.addEventListener('click', function(e) {
-        if (e.target !== lightbox.querySelector('.lightbox-img')) {
-          lightbox.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      });
-      
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-          lightbox.classList.remove('active');
-          document.body.style.overflow = '';
-        }
       });
     });
   </script>
+
+  <!-- Image Modal -->
+  <div id="image-modal" class="modal" style="max-width:90%;background:transparent;box-shadow:none">
+    <div class="modal-content" style="padding:0;display:flex;flex-direction:column;align-items:center;background:transparent">
+      <img class="modal-img" src="" alt="" style="max-width:100%;max-height:80vh;object-fit:contain;border-radius:8px">
+      <div class="modal-caption" style="color:#fff;margin-top:16px;font-size:1.1rem;font-weight:600;text-align:center;padding:0 24px;max-width:800px"></div>
+    </div>
+  </div>
 
 </body>
 </html>
